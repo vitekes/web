@@ -1,12 +1,14 @@
 # Стадия сборки
-FROM node:21.7.3 as build
+FROM node:20.17.0-alpine as build
+
+RUN apt update -y && apt upgrade -y
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
 # Копируем package.json и устанавливаем зависимости
 COPY ./package.json ./
-RUN npm install
+RUN npm install --verbose
 
 # Копируем остальные файлы и собираем приложение
 COPY ./ .
@@ -16,7 +18,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Копируем собранные файлы в Nginx
-COPY --from=build /app/dist/ /usr/share/nginx/html
+COPY --from=build /app/build/ /usr/share/nginx/html
 
 # Опционально, если у тебя есть кастомный конфиг для Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
