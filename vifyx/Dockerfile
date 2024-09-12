@@ -1,7 +1,7 @@
 # Стадия сборки
 FROM node:20.17.0-alpine as build
 
-RUN apt update -y && apt upgrade -y
+# RUN apt update -y && apt upgrade -y
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
