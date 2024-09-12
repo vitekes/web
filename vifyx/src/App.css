@@ -1,0 +1,8 @@
+button.active,
+div.active,
+a.block.active{
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+    color: #737373;
+    font-weight: medium;
+}

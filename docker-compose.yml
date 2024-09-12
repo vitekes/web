@@ -1,0 +1,70 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./vifyx/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    # depends_on:
+    #   - web
+
+  # web:
+  #   build:
+  #     context: ./.docker/django/
+  #     dockerfile: Dockerfile
+  #   command: >
+  #     bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+  #   ports:
+  #     - "8000:8000"
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./:/web/
+  #   depends_on:
+  #     - db
+  #     - redis
+  #     # - celery_beat
+
+  # db:
+  #   image: postgres:14
+  #   volumes:
+  #     - ./.docker/postgres/data:/var/lib/postgresql/data
+  #     - ./.docker/postgres/dumps:/dumps
+  #   restart: always
+  #   # networks:
+  #   #   - localnetwork
+  #   env_file:
+  #     - .env
+
+  # redis:
+  #   image: redis:latest
+  #   networks:
+  #     - localnetwork
+
+  # celery:
+  #   build:
+  #     context: ./.docker/django/
+  #     dockerfile: Dockerfile
+  #   command: celery -A your_django_project worker --loglevel=info
+  #   depends_on:
+  #     - db
+  #     - redis
+  #   networks:
+  #     - localnetwork
+
+  # celery_beat:
+  #   build:
+  #     context: ./.docker/django/
+  #     dockerfile: Dockerfile
+  #   command: celery -A your_django_project beat --loglevel=info
+  #   depends_on:
+  #     - db
+  #     - redis
+  #   networks:
+  #     - localnetwork
+
+# networks:
+#   localnetwork:
+#     # external: true
