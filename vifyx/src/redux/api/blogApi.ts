@@ -4,7 +4,7 @@ import { RootState } from "../store";
 export const blogApi = createApi({
   reducerPath: "blogApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://0.0.0.0:3001/api/v1/blogs/",
+    baseUrl: "http://167.172.96.11/api/v1/blogs/",
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as RootState).user.auth?.token;
       if (token) {

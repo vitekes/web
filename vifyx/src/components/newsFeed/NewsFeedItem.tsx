@@ -38,8 +38,7 @@ export default function NewsFeedItem(props: INewsFeedItem) {
         <div>
           <span className="font-bold">{props.title}</span>
         </div>
-        <div className="max-w-[210px] sm:max-w-[438px] flex-auto">
-          <p className="line-clamp-3 lg:line-clamp-4">{props.content}</p>
+        <div className="max-w-[210px] sm:max-w-[438px] flex-auto line-clamp-3 lg:line-clamp-4" dangerouslySetInnerHTML={{ __html: props.content }}>
         </div>
         <div className="flex justify-between gap-[5px] sm:gap-[15px]">
           <div className="flex gap-[25px] items-center">
@@ -70,7 +69,7 @@ export default function NewsFeedItem(props: INewsFeedItem) {
       <div className="m-[5px] sm:m-[10px] max-w-[264px] max-h-[233px]">
         <img
           className="w-[130px] sm:w-[264px] h-[130px] sm:h-[233px] object-cover object-center rounded-lg"
-          src={`${"http://127.0.0.1:3001"}${props.preview}`}
+          src={`${"http://167.172.96.11"}${props.preview}`}
           alt="preview"
         />
       </div>
