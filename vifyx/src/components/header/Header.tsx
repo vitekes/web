@@ -34,8 +34,8 @@ export default function Header() {
 				<MenuList />
 				<div className='inline-flex gap-[28px] items-center'>
 					<div className='inline-flex space-x-[9px] lg:space-x-[20px]'>
-						{links.map(({ icon, link }) => (
-							<div className='w-[22px] lg:w-[30px]'>
+						{links.map(({ icon, link }, index) => (
+							<div className='w-[22px] lg:w-[30px]' key={index}>
 								<Link to={link}>
 									<img src={icon} alt={`${icon}`} />
 								</Link>

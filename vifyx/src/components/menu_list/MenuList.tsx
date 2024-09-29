@@ -50,8 +50,8 @@ export default function MenuList({ hidden = true }: IMenuList) {
 				<div>
 					<nav>
 						<ul className='flex gap-[11px] lg:gap-[22px] flex-col items-center md:items-start md:flex-row'>
-							{links.map(({ link, name }) => (
-								<li>
+							{links.map(({ link, name }, index) => (
+								<li key={index}>
 									<Link to={link}>{name}</Link>
 								</li>
 							))}
