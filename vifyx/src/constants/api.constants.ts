@@ -1,1 +1,1 @@
-export const API_URL = process.env.SERVER_URL
+export const API_URL = import.meta.env.VITE_SERVER_URL

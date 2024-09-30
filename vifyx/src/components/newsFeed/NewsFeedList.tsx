@@ -1,4 +1,4 @@
-import { useLatestNewsTapeQuery } from '../../redux/api/blogApi'
+import { useLatestNewsTapeQuery } from 'src/redux/api/blogApi'
 import NewsFeedItem, { INewsFeedItem } from './NewsFeedItem'
 
 export interface INewsFeedList {
@@ -6,7 +6,7 @@ export interface INewsFeedList {
 }
 
 export default function NewsFeedList({ tracked }: INewsFeedList) {
-	const { data, error, isLoading } = useLatestNewsTapeQuery({
+	const { data } = useLatestNewsTapeQuery({
 		q: tracked ? 'tracked' : '',
 	})
 

@@ -1,11 +1,11 @@
+import NewsFeedList from 'components/newsFeed/NewsFeedList'
+import avatar2 from 'images/icons/avatar2.jpg'
+import plus from 'images/icons/plus.svg'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import NewsFeedList from '../../components/newsFeed/NewsFeedList'
-import avatar2 from '../../images/icons/avatar2.jpg'
-import plus from '../../images/icons/plus.svg'
-import { openModal } from '../../redux/features/modal_status/modalStatusSlice'
-import { RootState } from '../../redux/store'
+import { openModal } from 'src/redux/features/modal_status/modalStatusSlice'
+import { RootState } from 'src/redux/store'
 
 export default function MainPage() {
 	const dispatch = useDispatch()

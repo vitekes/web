@@ -1,8 +1,8 @@
-import avatar from '../../images/icons/avatar.jpg'
-import ch_plus from '../../images/icons/ch_plus.svg'
-import dots from '../../images/icons/dots.svg'
-import like from '../../images/icons/like.svg'
-import view from '../../images/icons/view.svg'
+import avatar from 'images/icons/avatar.jpg'
+import ch_plus from 'images/icons/ch_plus.svg'
+import dots from 'images/icons/dots.svg'
+import like from 'images/icons/like.svg'
+import view from 'images/icons/view.svg'
 
 export interface INewsFeedItem {
 	user: string

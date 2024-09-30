@@ -1,10 +1,10 @@
+import Logo from 'components/logo/Logo'
+import MenuList from 'components/menu_list/MenuList'
+import icon1 from 'images/icons/Icons_1.svg'
+import icon2 from 'images/icons/Icons_2.svg'
+import icon3 from 'images/icons/Icons_3.svg'
+import icon4 from 'images/icons/Icons_4.svg'
 import { Link } from 'react-router-dom'
-import Logo from '../../components/logo/Logo'
-import MenuList from '../../components/menu_list/MenuList'
-import icon1 from '../../images/icons/Icons_1.svg'
-import icon2 from '../../images/icons/Icons_2.svg'
-import icon3 from '../../images/icons/Icons_3.svg'
-import icon4 from '../../images/icons/Icons_4.svg'
 import Avatar from '../avatar/Avatar'
 
 const links = [

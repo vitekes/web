@@ -1,4 +1,4 @@
-import { axiosClassic } from '../api/axios'
+import { axiosClassic } from 'src/api/axios'
 
 class QuestsService {
 	private readonly BASE_URL = '/quests'
