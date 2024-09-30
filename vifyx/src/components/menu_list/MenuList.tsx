@@ -1,48 +1,64 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 interface IMenuList {
-  hidden?: boolean
+	hidden?: boolean
 }
+interface ILink {
+	link: string
+	name: string
+}
+const links: ILink[] = [
+	{
+		link: '/',
+		name: 'Лента',
+	},
+	{
+		link: '/',
+		name: 'Мой блог',
+	},
+	{
+		link: '/collection',
+		name: 'Коллекция',
+	},
+	{
+		link: '/company',
+		name: 'Компании',
+	},
+	{
+		link: '/ratings',
+		name: 'Рейтинги',
+	},
+]
 
-export default function MenuList({ hidden = true }: IMenuList ) {
-  const [width, setWidth] = useState<number>(window.innerWidth);
+export default function MenuList({ hidden = true }: IMenuList) {
+	const [width, setWidth] = useState<number>(window.innerWidth)
 
-  useEffect(() => {
-    if (hidden) {
-      const handleResize = () => setWidth(window.innerWidth);
+	useEffect(() => {
+		if (hidden) {
+			const handleResize = () => setWidth(window.innerWidth)
 
-      window.addEventListener("resize", handleResize);
-      
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, [hidden]);
+			window.addEventListener('resize', handleResize)
 
-  return (
-    <>
-    {(!hidden || width >= 768) && (
-      <div>
-        <nav>
-          <ul className="flex gap-[11px] lg:gap-[22px] flex-col items-center md:items-start md:flex-row">
-            <li>
-              <Link to="/">Лента</Link>
-            </li>
-            <li>
-              <Link to="/my-blog">Мой блог</Link>
-            </li>
-            <li>
-              <Link to="/collection">Коллекция</Link>
-            </li>
-            <li>
-              <Link to="/company">Компании</Link>
-            </li>
-            <li>
-              <Link to="/ratings">Рейтинги</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    )}
-    </>
-  )
+			return () => window.removeEventListener('resize', handleResize)
+		}
+	}, [hidden])
+
+	return (
+		<>
+			{(!hidden || width >= 768) && (
+				<div>
+					<nav>
+						<ul className='flex gap-[11px] lg:gap-[22px] flex-col items-center md:items-start md:flex-row'>
+							{links.map(({ link, name }, index) => (
+								<li key={index}>
+									<Link to={link}>{name}</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+				</div>
+			)}
+		</>
+	)
 }
