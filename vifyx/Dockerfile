@@ -7,7 +7,7 @@ FROM node:20.17.0-alpine as build
 WORKDIR /app
 
 # Копируем package.json и устанавливаем зависимости
-COPY ./package.json ./
+COPY ./package*.json ./
 RUN npm install --verbose
 
 # Копируем остальные файлы и собираем приложение
