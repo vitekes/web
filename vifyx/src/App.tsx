@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux'
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
 import Layout from "./components/layout/Layout"
@@ -6,10 +5,7 @@ import MainPage from "./pages/MainPage/MainPage"
 import MyBlogPage from "./pages/MyBlogPage/MyBlogPage"
 
 function App() {
-  // const data = await blogsService.getAll()
-  // console.log(data);
-  const user = useSelector(({user}) => user)
-  console.log(user);
+  
   
   return (
     <Routes>
