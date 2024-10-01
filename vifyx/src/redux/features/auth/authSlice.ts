@@ -20,13 +20,13 @@ export interface IAccountState {
 const initialState: IAccountState = {
   auth: {
     token: localStorage.getItem("token") || "",
-    username: localStorage.getItem("username") || "",
+    username: localStorage.getItem("username") || ""
   },
   current: {
     username: localStorage.getItem("username") || "",
     email: "",
-    avatar: "",
-  },
+    avatar: ""
+  }
 };
 
 export const AuthSlice = createSlice({
@@ -38,9 +38,8 @@ export const AuthSlice = createSlice({
       state.auth = { username: username, token: token };
       localStorage.setItem("token", token);
       localStorage.setItem("username", username);
-      
     },
-    clearAuthData: (state) => {
+    clearAuthData: state => {
       state.auth = initialState.auth;
       localStorage.removeItem("token");
       localStorage.removeItem("username");
@@ -48,10 +47,10 @@ export const AuthSlice = createSlice({
     setCurrentUser: (state, action: PayloadAction<ICurrent>) => {
       state.current = action.payload;
     },
-    clearCurrentUser: (state) => {
+    clearCurrentUser: state => {
       state.current = initialState.current;
-    },
-  },
+    }
+  }
 });
 
 export const { setAuthData, clearAuthData, setCurrentUser, clearCurrentUser } = AuthSlice.actions;

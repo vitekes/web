@@ -1,14 +1,14 @@
-import axios, { type CreateAxiosDefaults } from 'axios'
-import { API_URL } from '../constants/api.constants'
-import { getContentType } from './api.helper'
+import axios, { type CreateAxiosDefaults } from "axios";
+import { API_URL } from "../constants/api.constants";
+import { getContentType } from "./api.helper";
 
 const axiosOptions: CreateAxiosDefaults = {
-	baseURL: API_URL,
-	headers: getContentType(),
-	withCredentials: true,
-}
+  baseURL: API_URL,
+  headers: getContentType(),
+  withCredentials: true
+};
 
-export const axiosClassic = axios.create(axiosOptions)
+export const axiosClassic = axios.create(axiosOptions);
 
 // export const instance = axios.create(axiosOptions)
 
