@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 interface IMenuList {
   hidden?: boolean;
@@ -14,7 +14,7 @@ const links: ILink[] = [
     name: "Лента",
   },
   {
-    link: "/",
+    link: "/my-",
     name: "Мой блог",
   },
   {
