@@ -3,6 +3,7 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import MainPage from "./pages/MainPage/MainPage";
 import MyBlogPage from "./pages/MyBlogPage/MyBlogPage";
+import ContestsPage from "src/pages/ContestsPage/ContestsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="collection" element={<MyBlogPage />} />
         <Route path="company" element={<MyBlogPage />} />
         <Route path="ratings" element={<MyBlogPage />} />
+        <Route path="contests" element={<ContestsPage />} />
       </Route>
     </Routes>
   );
