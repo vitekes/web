@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 import MainPage from "./pages/MainPage/MainPage";
 import MyBlogPage from "./pages/MyBlogPage/MyBlogPage";
 import ContestsPage from "src/pages/ContestsPage/ContestsPage";
+import ContestDetailsPage from "src/pages/ContestDetailsPage/ContestDetailsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="company" element={<MyBlogPage />} />
         <Route path="ratings" element={<MyBlogPage />} />
         <Route path="contests" element={<ContestsPage />} />
+        <Route path="contests/:id" element={<ContestDetailsPage />} />
       </Route>
     </Routes>
   );

@@ -10,3 +10,30 @@ export interface Contest {
   start_date: string;
   title: string;
 }
+
+export interface Post {
+  amount: null;
+  content: string;
+  count_comments: number;
+  count_likes: number;
+  count_views: number;
+  date: string;
+  id: number;
+  is_paid: boolean;
+  language: string;
+  namespace: string;
+  pinned_comment: null;
+  preview: string;
+  title: string;
+  user: string;
+}
+
+interface Result {
+  user: string;
+  post: string;
+  pk: number;
+}
+export interface ContestDetails extends Contest {
+  posts: Post[];
+  results: Record<string, Result[]>;
+}

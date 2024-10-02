@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 import { ru } from "date-fns/locale";
+import { Link, useNavigate } from "react-router-dom";
 import type { Contest } from "src/components/contests/type";
 import { API_URL_CLIENT } from "src/constants/api.constants";
 
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function ContestsCard({ contest }: Props) {
+  const navigate = useNavigate();
+
   return (
     <div className="shadow-custom flex flex-col rounded-[11px] px-[54px] py-10">
       <div className="flex flex-row items-center justify-between">
@@ -31,9 +34,14 @@ export default function ContestsCard({ contest }: Props) {
         <p className="text-[19px] font-light text-black">{contest.description}</p>
       </div>
       <div className="pt-4">
-        <button className="w-[252px] max-w-[252px] rounded-md bg-[#252A3D] py-4 text-center text-[20px] font-bold text-white">
-          Детали конкурса
-        </button>
+        <Link to={`/contests/${contest.id}`}>
+          <button
+            onClick={() => navigate(`/contests/${contest.id}/`)}
+            className="w-[252px] max-w-[252px] rounded-md bg-[#252A3D] py-4 text-center text-[20px] font-bold text-white"
+          >
+            Детали конкурса
+          </button>
+        </Link>
       </div>
     </div>
   );

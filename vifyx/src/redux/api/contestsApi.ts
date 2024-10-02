@@ -17,8 +17,14 @@ export const contestApi = createApi({
   endpoints: builder => ({
     getContests: builder.query({
       query: () => "/"
+    }),
+    getContestDetails: builder.query({
+      query: ({ id }) => `/${id}/`
+    }),
+    getContestElements: builder.query({
+      query: ({ id }) => `/get_elements/${id}/`
     })
   })
 });
 
-export const { useGetContestsQuery } = contestApi;
+export const { useGetContestsQuery, useGetContestDetailsQuery, useGetContestElementsQuery } = contestApi;
