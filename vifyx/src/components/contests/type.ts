@@ -28,7 +28,7 @@ export interface Post {
   user: string;
 }
 
-interface Result {
+export interface Result {
   user: string;
   post: string;
   pk: number;
