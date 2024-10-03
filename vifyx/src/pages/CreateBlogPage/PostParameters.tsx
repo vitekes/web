@@ -365,12 +365,12 @@ const PostParameters = ({postContent,title}:any) => {
     <div className="w-full flex justify-between mt-2">
       <button 
         onClick={() => publish()} 
-        className="bg-[#252A3D] text-white rounded-lg flex justify-center items-center px-9 py-2 font-bold text-base hover:bg-[#191c29] text-[12px] duration-300 md:w-[200px] md:h-[55px] md:text-[16px]">
+        className="bg-[#252A3D] text-white rounded-lg flex justify-center items-center px-9 py-2 font-bold text-base hover:bg-[#191c29] text-[12px] duration-300 md:w-[200px] md:h-[55px] md:text-[16px] text-xs">
         Опубликовать
       </button>
       <button 
         onClick={() => saveDraft()}
-        className="bg-[#252A3D] text-white rounded-lg flex justify-center items-center px-9 py-2 font-bold text-base hover:bg-[#191c29] text-[12px] duration-300 md:min-w-[200px] md:h-[55px] md:text-[16px]">
+        className="bg-[#252A3D] text-white rounded-lg flex justify-center items-center px-9 py-2 font-bold text-base hover:bg-[#191c29] text-[12px] duration-300 md:min-w-[200px] md:h-[55px] md:text-[16px] text-xs">
         Сохранить черновик
       </button>
     </div>
