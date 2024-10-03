@@ -37,7 +37,7 @@ export default function ContestDetailsPage() {
   }, [data]);
 
   const competitionResult: Result[] = useMemo(() => {
-    if (!data?.data) return [];
+    if (!data?.data?.results) return [];
     const results = data.data.results;
     const transformedArray = Object.keys(results).flatMap(place =>
       results[place].map(item => ({
@@ -56,19 +56,30 @@ export default function ContestDetailsPage() {
   return (
     <div className="flex flex-col items-center justify-center">
       <Competition contest={contest} />
-      {options && <SelectCompetition options={options} />}
-      <div className="w-[1000px] pb-10 pt-4">
-        <button className="w-[252px] max-w-[252px] rounded-md bg-[#252A3D] py-4 text-center text-[20px] font-bold text-white">
-          Подать работу
-        </button>
-      </div>
-      {competitionResult && <CompetitionResults results={competitionResult} />}
-      <h2 className="mb-5 text-[28px] font-bold text-[#000000]">Участвующие работы</h2>
-      <div className="contPosts w-fill flex flex-col gap-5">
-        {data?.data?.posts.map(post => {
-          return <PostCard key={post.id} post={post} />;
-        })}
-      </div>
+      {!!options.length && (
+        <div className="w-[1000px]">
+          <div className="w-[1000px]">
+            <h2 className="mb-5 text-[22px] font-normal text-[#000000]">Выберите работу</h2>
+          </div>
+          <SelectCompetition options={options} />
+          <div className="w-[1000px] pb-10 pt-4">
+            <button className="w-[252px] max-w-[252px] rounded-md bg-[#252A3D] py-4 text-center text-[20px] font-bold text-white">
+              Подать работу
+            </button>
+          </div>
+        </div>
+      )}
+      {!!competitionResult.length && <CompetitionResults results={competitionResult} />}
+      {!!data?.data?.posts?.length && (
+        <div className="w-[1000px]">
+          <h2 className="mb-5 text-[28px] font-bold text-[#000000]">Участвующие работы</h2>
+          <div className="contPosts w-fill flex flex-col gap-5">
+            {data?.data?.posts.map(post => {
+              return <PostCard key={post.id} post={post} />;
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
