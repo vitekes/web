@@ -1,0 +1,15 @@
+.ce-toolbar__settings-btn, 
+.ce-toolbar__tune-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+.ce-toolbar__settings-btn svg,
+.ce-toolbar__tune-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
