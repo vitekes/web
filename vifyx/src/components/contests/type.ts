@@ -37,3 +37,12 @@ export interface ContestDetails extends Contest {
   posts: Post[];
   results: Record<string, Result[]>;
 }
+
+export interface ShortContest {
+  title: string;
+  start_date: string;
+  end_date: string;
+  count_participants: number;
+  preview: string;
+  description: string;
+}

@@ -12,8 +12,8 @@ export default function ContestsCard({ contest }: Props) {
   const navigate = useNavigate();
 
   return (
-    <div className="shadow-custom flex flex-col rounded-[11px] px-[54px] py-10">
-      <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-col overflow-hidden rounded-[11px] px-[54px] py-10 shadow-custom">
+      <div className="flex flex-row items-center justify-between pb-4">
         <div className="flex items-center space-x-4">
           <h1 className="text-[28px] font-normal text-black">{contest.title}</h1>
           <div>
@@ -27,8 +27,12 @@ export default function ContestsCard({ contest }: Props) {
           <p className="text-[17px] font-bold text-[#737373]">{contest.count_participants}</p>
         </div>
       </div>
-      <div className="h-[330px] w-full pt-4">
-        <img src={`${API_URL_CLIENT + contest.preview}`} alt="contest" className="h-full w-full object-cover" />
+      <div className="h-[330px] w-full overflow-hidden rounded-[11px]">
+        {contest.preview ? (
+          <img src={`${API_URL_CLIENT + contest.preview}`} alt="contest" className="h-full w-full object-cover" />
+        ) : (
+          <div className="h-full w-full bg-gray-200" />
+        )}
       </div>
       <div className="pt-10">
         <p className="text-[19px] font-light text-black">{contest.description}</p>
