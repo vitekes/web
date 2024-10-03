@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface IMenuList {
   hidden?: boolean;
@@ -11,24 +11,24 @@ interface ILink {
 const links: ILink[] = [
   {
     link: "/",
-    name: "Лента",
+    name: "Лента"
   },
   {
-    link: "/my-",
-    name: "Мой блог",
+    link: "/my-blog",
+    name: "Мой блог"
   },
   {
     link: "/collection",
-    name: "Коллекция",
+    name: "Коллекция"
   },
   {
     link: "/company",
-    name: "Компании",
+    name: "Компании"
   },
   {
     link: "/ratings",
-    name: "Рейтинги",
-  },
+    name: "Рейтинги"
+  }
 ];
 
 export default function MenuList({ hidden = true }: IMenuList) {
@@ -49,7 +49,7 @@ export default function MenuList({ hidden = true }: IMenuList) {
       {(!hidden || width >= 768) && (
         <div>
           <nav>
-            <ul className="flex gap-[11px] lg:gap-[22px] flex-col items-center md:items-start md:flex-row">
+            <ul className="flex flex-col items-center gap-[11px] md:flex-row md:items-start lg:gap-[22px]">
               {links.map(({ link, name }, index) => (
                 <li key={index}>
                   <Link to={link}>{name}</Link>
