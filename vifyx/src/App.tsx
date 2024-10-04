@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
+import { Album } from "./pages/Album/Album";
 import MainPage from "./pages/MainPage/MainPage";
 import MyBlogPage from "./pages/MyBlogPage/MyBlogPage";
 import { Quest } from "./pages/Quest/Quest";
@@ -16,7 +17,8 @@ const paths: IPath[] = [
   { element: <MyBlogPage />, path: "my-blog" },
   { element: <MyBlogPage />, path: "collection" },
   { element: <MyBlogPage />, path: "ratings" },
-  { element: <MyBlogPage />, path: "company" }
+  { element: <MyBlogPage />, path: "company" },
+  { element: <Album />, path: "album" }
 ];
 
 function App() {

@@ -1,5 +1,6 @@
 import image from "images/wom.png";
 import { GoArrowRight, GoBook, GoEye, GoGift, GoHeart, GoRepo } from "react-icons/go";
+import { Tags } from "src/components/tags/Tags";
 export function QuestInfo() {
   const date = new Date();
   return (
@@ -35,11 +36,7 @@ export function QuestInfo() {
             <GoGift /> 488
           </span>
         </section>
-        <section className="tags">
-          <div className="tag">Животные</div>
-          <div className="tag">Пингвины</div>
-          <div className="tag">Биология</div>
-        </section>
+        <Tags tags={["Животные", "Пингвины"]} />
         <hr />
         <section className="quest__description">
           <h2 className="quests__title">Описание</h2>
