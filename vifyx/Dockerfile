@@ -1,14 +1,15 @@
-FROM node:22.2.0 AS builder
+# FRONT
+FROM node:22.2.0 as builder
 WORKDIR /app
-COPY package*.json .
-COPY yarn.lock .
 
-RUN npm i -g yarn
-RUN yarn
+COPY package*.json .
+
+RUN npm install
 COPY . .
 
-RUN yarn run build
+RUN npm run build
 
+# NGINX
 FROM nginx:latest
 
 COPY --from=builder /app/dist /usr/share/nginx/html

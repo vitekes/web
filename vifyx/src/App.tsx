@@ -1,21 +1,32 @@
-import { Route, Routes } from "react-router-dom"
-import "./App.css"
-import Layout from "./components/layout/Layout"
-import MainPage from "./pages/MainPage/MainPage"
-import MyBlogPage from "./pages/MyBlogPage/MyBlogPage"
+import { ReactElement } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/layout/Layout";
+import MainPage from "./pages/MainPage/MainPage";
+import MyBlogPage from "./pages/MyBlogPage/MyBlogPage";
+import { Quest } from "./pages/Quest/Quest";
+interface IPath {
+  element: ReactElement;
+  path: string;
+}
+
+const paths: IPath[] = [
+  { element: <MainPage />, path: "tracked" },
+  { element: <Quest />, path: "quest" },
+  { element: <MyBlogPage />, path: "my-blog" },
+  { element: <MyBlogPage />, path: "collection" },
+  { element: <MyBlogPage />, path: "ratings" },
+  { element: <MyBlogPage />, path: "company" }
+];
 
 function App() {
-  
-  
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<MainPage />} />
-        <Route path="tracked" element={<MainPage />} />
-        <Route path="my-blog" element={<MyBlogPage />} />
-        <Route path="collection" element={<MyBlogPage />} />
-        <Route path="company" element={<MyBlogPage />} />
-        <Route path="ratings" element={<MyBlogPage />} />
+        {paths.map(({ element, path }, index) => (
+          <Route key={index} path={path} element={element} />
+        ))}
       </Route>
     </Routes>
   );

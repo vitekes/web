@@ -1,0 +1,141 @@
+:root
+	--width: 80% 
+.quest
+	hr
+		margin: 30px 0
+		width: var(--width)
+	.questInfo
+		width: var(--width)
+		display: flex
+		column-gap: 18px
+		.left
+			width: 30%
+			.quest__img
+				width: 100%
+				height: 80%
+				margin-bottom: 13px
+			.left__btn
+				display: grid
+				row-gap: 7px
+				button
+					&:first-child
+						background-color: #CBF3B2
+					width: 100%
+					border: 1px solid #252A3D
+					font-weight: 700
+					border-radius: 4px
+					padding: 9px 0 9px
+					display: flex
+					justify-content: center
+					align-items: center
+					column-gap: 6px
+					// height: calc( 100% - 7px )
+					// height: 100%
+		.right
+			width: 70%
+			display: grid
+			// row-gap: 8px
+			.quest__author,.category
+				color: #3E64E3
+				cursor: pointer
+				svg
+					color: black
+			.quests__title
+				// font-size: 22px
+				// font-weight: 600
+				font: 600 22px sans-serif
+			.quest__time
+				color: #252A3D
+				font: 500 16px  sans-serif !important
+			.icons
+				width: 30%
+				display: flex
+				justify-content: space-between
+				span
+					color: #737373
+					font-size: 20px
+
+					column-gap: 5px
+					display: flex
+					align-items: center
+			.quest__description
+				margin-top: 12px
+				h2
+					margin-bottom: 8px
+				p
+					font-size: 17px
+					font-weight: 400
+			.tags
+				display: flex
+				width: 25%
+				column-gap: 9px
+				.tag
+					cursor: pointer
+					font-size: 12px
+					padding: 3px 10px
+					color: green
+					border: 3px solid lightgreen
+.comments
+	width: var(--width)
+	.comments__input
+		width: 100%
+		padding: 15px 23px
+
+		border: 2px solid #BEBEBE
+		border-radius: 5px
+
+		// height: 50px
+		font-size: 15px
+	.comments__count
+		display: flex
+		align-items: center
+		column-gap: 12px
+		font-size: 26px
+		color: #757575
+		margin-bottom: 9px
+	.comments__list
+		margin-top: 30px
+		hr
+			width: 100%
+		.comment
+			display: flex
+			position: relative
+			height: 160px
+			.comment__content
+				margin-top: 4px
+				h4
+					font-size: 22px
+					font-weight: 600
+				time
+					font-size: 15px
+					color: #a0a0a0 
+				p
+					margin-top: 15px
+					font-size: 15px
+			.comment__img
+				margin-right: 15px
+				img
+					min-width: 60px
+					height: 60px
+					border-radius: 50% 
+			.comment__stats
+				position: absolute
+				bottom: 0
+				right: 0
+
+				color: #737373
+				font-size: 20px
+				
+				display: flex
+				column-gap: 20px
+				span
+					display: flex
+					column-gap: 10px
+					align-items: center
+@media screen and (width <= 750px)
+	:root
+		--width: 100% 
+	.questInfo
+		display: grid !important
+		.left, .right
+			width: 100% !important
