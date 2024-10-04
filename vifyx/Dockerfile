@@ -1,11 +1,13 @@
 # FRONT
-FROM node:22.2.0 as builder
+FROM node:22.2.0 AS builder
 WORKDIR /app
 
 COPY package*.json .
 
 RUN npm install
 COPY . .
+
+EXPOSE 80
 
 RUN npm run build
 
