@@ -6,7 +6,7 @@ import RegistrationModal from "../modals/RegistrationModal";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col w-full h-[100vh] gap-[30px]">
+    <div className="flex flex-col w-full h-[100vh] font-[Inter]">
       <Header />
       <main className="flex-auto" id="main">
         <Outlet />

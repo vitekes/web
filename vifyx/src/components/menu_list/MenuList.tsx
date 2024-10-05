@@ -14,21 +14,25 @@ const links: ILink[] = [
     name: "Лента"
   },
   {
-    link: "/my-blog",
-    name: "Мой блог"
+    link: "/blog",
+    name: "Блог",
   },
   {
     link: "/collection",
     name: "Коллекция"
   },
   {
-    link: "/company",
-    name: "Компании"
+    link: "/contests",
+    name: "Конкурсы",
   },
   {
-    link: "/ratings",
-    name: "Рейтинги"
-  }
+    link: "/quests",
+    name: "Квесты",
+  },
+  {
+    link: "/albums",
+    name: "Альбомы",
+  },
 ];
 
 export default function MenuList({ hidden = true }: IMenuList) {

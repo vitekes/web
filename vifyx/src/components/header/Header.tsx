@@ -4,13 +4,14 @@ import icon1 from 'images/icons/Icons_1.svg'
 import icon2 from 'images/icons/Icons_2.svg'
 import icon3 from 'images/icons/Icons_3.svg'
 import icon4 from 'images/icons/Icons_4.svg'
+import icon5 from 'images/icons/Icons_5.svg'
 import { Link } from 'react-router-dom'
 import Avatar from '../avatar/Avatar'
 
 const links = [
 	{
 		link: '/',
-		icon: icon3,
+		icon: icon5,
 	},
 	{
 		link: '/',
@@ -20,16 +21,12 @@ const links = [
 		link: '/',
 		icon: icon1,
 	},
-	{
-		link: '/',
-		icon: icon4,
-	},
 ]
 
 export default function Header() {
 	return (
-		<header className='pt-[30px]'>
-			<div className='container md:px-0 px-1 md:w-[1120px] mx-auto flex justify-between items-center border-b pb-[25px]'>
+		<header className='pt-[15px] md:pt-[30px]'>
+			<div className='container md:px-0 px-1 md:w-[1120px] mx-auto flex justify-between items-center border-b pb-[15px] mb:pb-[25px]'>
 				<Logo />
 				<MenuList />
 				<div className='inline-flex gap-[28px] items-center'>
