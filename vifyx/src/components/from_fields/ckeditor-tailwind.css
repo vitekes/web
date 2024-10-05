@@ -1,0 +1,7 @@
+.ck-blurred.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline, .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners{
+    @apply rounded-b-xl min-h-[200px];
+
+}
+.ck.ck-editor__editable_inline {
+    @apply border-[#e5e7eb];
+}
