@@ -45,7 +45,7 @@ const CoverImage: React.FC<CoverImageProps> = ({ onImageUpload }) => {
                     />
                     <label 
                         htmlFor="file-input" 
-                        className="cursor-pointer px-3 py-1 md:px-[20px] md:py-[10px] text-[#10B981] border-solid border-[2px] md: border-[1px] border-[#10B981] rounded-md md:font-[16px] text-[9px] font-medium text=[#3C3C3C]"
+                        className="cursor-pointer px-3 py-1 md:px-[20px] md:py-[10px] text-[#10B981] border-solid border-[2px] md: border-[1px] border-[#10B981] rounded-md md:text-[16px] text-[9px] font-medium text=[#3C3C3C]"
                     >Выберите файл </label>
                 {!image &&  <span className='md:text-[22px] text-[10px] ml-4'>Файл не выбран</span>}
                 </div>

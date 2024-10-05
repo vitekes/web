@@ -22,7 +22,7 @@
         }, [initEditor]);
 
         return (
-            <div id="editorjs" className="border-solid md:border-[2px] rounded-md border-[#A0A0A0] flex-grow md:pl-16 p-2 border-[1px] relative"></div>
+            <div id="editorjs" className="border-solid md:border-[2px] rounded-md border-[#A0A0A0] flex-grow md:pl-14 p-2 border-[1px] relative "></div>
         );
     };
 

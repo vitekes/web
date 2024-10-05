@@ -55,6 +55,7 @@ const QuestionnaireBlock:FC<QuestionnaireBlockProps> = ({answers, setAnswers}) =
         <div className="flex items-center">
           <input
             className="w-3 h-3 mr-2 md:mr-7 md:h-5 md:w-5"
+            style={{boxShadow:'0px 0px 15px 0px rgba(0, 0, 0, 0.5)'}}
             type="checkbox"
             onChange={(e) => openFn(e.target.checked)}
           />
@@ -80,6 +81,7 @@ const QuestionnaireBlock:FC<QuestionnaireBlockProps> = ({answers, setAnswers}) =
             answers.map((answer, index) => (
               <div className="w-full flex items-center mb-2 md:mb-5" key={answer.id}>
                 <input
+                  style={{boxShadow:'0px 0px 15px 0px rgba(0, 0, 0, 0.35)'}}
                   value={answer.answer}
                   type="text"
                   className="w-full h-8 md:h-[60px] border-solid border-[#B6B6B6] border-[2px] md: border-[1px] rounded-md md:px-12 px-4"

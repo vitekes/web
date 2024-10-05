@@ -103,7 +103,7 @@ const Poll:FC<PollProps> = ({polls, setPolls}) => {
             {open && <div className="w-full">
                 {polls?.map((poll, pollIndex) => (
                     <div key={pollIndex} className="mt-4 md:mt-10 ">
-                            <input onChange={(e) => handleQuestionChange(pollIndex, e.target.value)} value={poll.question} className="w-full text-sm h-[38px] border-solid border-black border-[1px] rounded-md md:h-[75px] md:border-[2px] md:rounded-md md:px-12 px-4" type="text" placeholder="Вопрос"/>
+                            <input style={{boxShadow:'0px 0px 15px 0px rgba(0, 0, 0, 0.5)'}}  onChange={(e) => handleQuestionChange(pollIndex, e.target.value)} value={poll.question} className="w-full text-sm h-[38px] border-solid border-black border-[1px] rounded-md md:h-[75px] md:border-[2px] md:rounded-md md:px-12 px-4" type="text" placeholder="Вопрос"/>
                             <div className="w-full flex justify-between md:block">
                                 <button onClick={() => addAndswer(pollIndex)} className="py-[8px] px-5 md:px-[40px] md:py-[18px] text-[10px] md:text-[15px] bg-[#252A3D] rounded-md md:rounded-xl text-white md:font-medium font-semibold uppercase mt-6 hover:bg-[#191c29] duration-300">Добавить варианты ответа</button>
                                {pollIndex > 0 &&  <button onClick={() => deletePoll(pollIndex)} className="text-[10px] px-[20px] py-[7px] md:px-[40px] md:py-[18px] bg-[#252A3D] rounded-md md:rounded-xl text-white font-medium uppercase mt-6 ml-7 ">Удалить</button>}
@@ -112,7 +112,7 @@ const Poll:FC<PollProps> = ({polls, setPolls}) => {
                             <div className="w-full mt-3 ">
                                 {poll.answers.map((answer, index) => (
                                     <div key={`${pollIndex}-${index}`} className="w-full flex items-center mb-4">
-                                    <input onChange={e => handleAnswerChange(pollIndex, index, e.target.value)} value={answer.answer} className="w-full h-8 md:h-[60px] border-solid border-[#B6B6B6] border-[2px] md: border-[1px] rounded-md md:px-12 px-4" type="text" placeholder="Вариант ответа"/>
+                                    <input style={{boxShadow:'0px 0px 15px 0px rgba(0, 0, 0, 0.5)'}} onChange={e => handleAnswerChange(pollIndex, index, e.target.value)} value={answer.answer} className="w-full h-8 md:h-[60px] border-solid border-[#B6B6B6] border-[2px] md: border-[1px] rounded-md md:px-12 px-4" type="text" placeholder="Вариант ответа"/>
                                     <button onClick={() => deleteAnswer(pollIndex, answer.id)} className="text-[10px] px-[20px] py-[7px] md:px-12 md:py-4 bg-[#CD3544] rounded-md text-white font-medium uppercase ml-8 ">Удалить</button>
                                 </div>
                                 ))}
