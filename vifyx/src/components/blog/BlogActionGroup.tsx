@@ -1,4 +1,3 @@
-import React from "react";
 import icon_bell from "images/icons/Bell.svg";
 import icon_share from "images/icons/Share.svg";
 import icon_mdi_bell_outline from "images/icons/mdi_bell-outline.svg";

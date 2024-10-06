@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import image from "images/peoples_blog.jpg";
 
 export interface IProfileHeader {

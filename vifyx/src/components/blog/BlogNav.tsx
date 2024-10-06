@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const listButton = [
   {
@@ -24,7 +24,7 @@ const listButton = [
 ];
 
 export default function BlogNav() {
-  const [activeButton, setActiveButton] = useState(listButton);
+  const [, setActiveButton] = useState(listButton);
 
   const clickHandler = (id: number) => {
     setActiveButton(prev => {

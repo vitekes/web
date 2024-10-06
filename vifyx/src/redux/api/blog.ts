@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { API_URL } from "../../constants/api.constants";
+// import { API_URL } from "../../constants/api.constants";
 import { RootState } from "../store";
 import { domain_name } from "./conf";
 import { clearAuthData } from "../features/auth/authSlice";

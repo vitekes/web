@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import avatar from "../../images/icons/avatar.jpg";
 import view from "../../images/icons/view.svg";
 import like from "../../images/icons/like.svg";
 import shared from "../../images/icons/sh.svg";
-import dots from "../../images/icons/dots.svg";
+// import dots from "../../images/icons/dots.svg";
 import category_text from "../../images/icons/category_text.svg";
 import book from "../../images/icons/Book.svg";
 import photo from "../../images/icons/photo.svg";

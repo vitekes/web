@@ -1,7 +1,5 @@
-import React from "react";
 import CustomCKEditor from "src/components/from_fields/CustomCKEditor";
-import CustomContentEditor from "src/components/from_fields/Editor";
-import ImageField from "src/components/from_fields/ImageField";
+// import ImageField from "src/components/from_fields/ImageField";
 import InputField from "src/components/from_fields/InputField";
 
 export default function MyBlogPageEdit() {
@@ -21,7 +19,7 @@ export default function MyBlogPageEdit() {
               id="page_name"
               name="page_name"
               value={""}
-              onChange={e => null}
+              onChange={_ => null}
             />
             <InputField
               type="text"
@@ -30,7 +28,7 @@ export default function MyBlogPageEdit() {
               id="creating"
               name="creating"
               value={""}
-              onChange={e => null}
+              onChange={_ => null}
             />
             {/* <ImageField
               label_text="Обложкa профиля"
@@ -40,7 +38,7 @@ export default function MyBlogPageEdit() {
               id="image"
               name="image"
               value={""}
-              onChange={e => null}
+              onChange={_ => null}
             /> */}
             <InputField
               type="text"
@@ -49,14 +47,14 @@ export default function MyBlogPageEdit() {
               id="url"
               name="url"
               value={""}
-              onChange={e => null}
+              onChange={_ => null}
             />
             <CustomCKEditor
               label_text="O вашей странице"
               labelClassName="font-medium text-[32px]"
               description="Это то, что потенциальные участники увидят, когда попадут на вашу страницу, поэтому обязательно нарисуйте привлекательную картину того, как они могут присоединиться к вам в этом путешествии."
               value=""
-              onChange={e => null}
+              onChange={_ => null}
             />
           </div>
           <div className="flex items-center justify-between">

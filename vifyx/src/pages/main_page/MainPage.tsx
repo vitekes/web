@@ -1,5 +1,4 @@
 import NewsFeedList from "components/newsFeed/NewsFeedList";
-import avatar2 from "images/icons/avatar2.jpg";
 import plus from "images/icons/plus.svg";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

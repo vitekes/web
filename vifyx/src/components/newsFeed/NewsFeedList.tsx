@@ -1,7 +1,8 @@
 import { useLatestNewsTapeQuery } from "src/redux/api/blog";
-import NewsFeedItem, { INewsFeedItem } from "./NewsFeedItem";
+import NewsFeedItem from "./NewsFeedItem";
 import { useInView } from "react-intersection-observer";
 import { useCallback, useEffect, useState } from "react";
+import { INewsFeedItem } from "src/redux/api/blog";
 import { debounce } from "lodash";
 
 export interface INewsFeedList {
@@ -10,7 +11,7 @@ export interface INewsFeedList {
 
 export default function NewsFeedList({ tracked }: INewsFeedList) {
   const [page, setPage] = useState(1);
-  const [items, setItems] = useState<INewsFeedItem[]>([]);
+  const [items, setItems] = useState<INewsFeedItem []>([]);
   const { data, error, isLoading, isFetching } = useLatestNewsTapeQuery({
     q: tracked ? "tracked" : "",
     page: page

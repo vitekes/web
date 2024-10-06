@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from "images/icons/avatar.jpg";
 
 export default function BlogUserProfile() {

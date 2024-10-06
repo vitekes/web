@@ -1,4 +1,3 @@
-import React from "react";
 import search_icon from "images/icons/search_icon.svg";
 
 export default function SearchBlock() {

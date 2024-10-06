@@ -1,11 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import ProfileHeader from "src/components/header/ProfileHeader";
 import NewsFeedList from "src/components/newsFeed/NewsFeedList";
-import CategoryList from "src/components/popular_categories/PopularCategories";
 
 import BlackButton from "src/components/button/BlackButton";
-import IconButton from "src/components/button/IconButton";
 import BlogEdit from "src/components/blog/BlogEdit";
 import BlogMassagerGroup from "src/components/blog/BlogMassagerGroup";
 import BlogActionGroup from "src/components/blog/BlogActionGroup";

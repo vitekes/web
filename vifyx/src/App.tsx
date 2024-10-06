@@ -19,12 +19,12 @@ const paths: IPath[] = [
   { element: <Quest />, path: "quests" },
   { element: <MyBlogPage />, path: "my-blog" },
   { element: <MyBlogEditPage />, path: "my-blog/edit" },
-  { element: <MyBlogPage />, path: "collection" },
-  { element: <MyBlogPage />, path: "ratings" },
-  { element: <MyBlogPage />, path: "company" },
-  { element: <MyBlogPage />, path: "blog" },
-  { element: <MyBlogPage />, path: "contests" },
-  { element: <MyBlogPage />, path: "albums" },
+  { element: <MyBlogPostPage />, path: "collection" },
+  { element: <MyBlogPostPage />, path: "ratings" },
+  { element: <MyBlogPostPage />, path: "company" },
+  { element: <MyBlogPostPage />, path: "blog" },
+  { element: <MyBlogPostPage />, path: "contests" },
+  { element: <MyBlogPostPage />, path: "albums" },
   { element: <Album />, path: "album" }
 ];
 

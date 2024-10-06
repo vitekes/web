@@ -1,4 +1,3 @@
-import React from 'react'
 import BlackButton from '../button/BlackButton';
 
 const subscription_list = [

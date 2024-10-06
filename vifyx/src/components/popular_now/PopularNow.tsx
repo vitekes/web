@@ -1,6 +1,4 @@
-import React from "react";
 import avatar2 from "images/icons/avatar2.jpg";
-import { Link } from "react-router-dom";
 import { useFetchPopularNowQuery } from "src/redux/api/blog";
 
 export default function PopularNow() {

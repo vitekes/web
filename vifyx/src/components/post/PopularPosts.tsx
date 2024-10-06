@@ -1,5 +1,3 @@
-import React from "react";
-import avatar2 from "images/icons/avatar2.jpg";
 import default_image from "images/images/default_264X233.png";
 import { IPostItem, useFetchPopularPostsQuery } from "src/redux/api/post";
 

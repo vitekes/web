@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import icon_instagram from "src/images/icons/instagram.svg";

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useFetchBestBlogsQuery } from 'src/redux/api/blog';
 import avatar2 from "images/icons/avatar2.jpg";
 import icon_users from "images/icons/users.svg";
