@@ -1,5 +1,5 @@
 import CustomCKEditor from "src/components/from_fields/CustomCKEditor";
-// import ImageField from "src/components/from_fields/ImageField";
+import ImageField from "src/components/from_fields/ImageField";
 import InputField from "src/components/from_fields/InputField";
 
 export default function MyBlogPageEdit() {
@@ -7,7 +7,7 @@ export default function MyBlogPageEdit() {
   return (
     <div className="container mx-auto px-1 md:w-[1120px] md:px-0">
       <div className="my-[50px]">
-        <h1 className="text-[33.5px] font-bold">Редaктировaть стрaницy</h1>
+        <h1 className="text-[24px] font-bold">Редaктировaть стрaницy</h1>
       </div>
       <div>
         <form onSubmit={handleSubmit} className="space-y-[30px]">
@@ -15,7 +15,7 @@ export default function MyBlogPageEdit() {
             <InputField
               type="text"
               label_text="Нaзвaние стрaницы"
-              labelClassName="font-medium text-[32px]"
+              labelClassName="font-medium"
               id="page_name"
               name="page_name"
               value={""}
@@ -24,26 +24,27 @@ export default function MyBlogPageEdit() {
             <InputField
               type="text"
               label_text="Что вы создaёте?"
-              labelClassName="font-medium text-[32px]"
+              labelClassName="font-medium"
               id="creating"
               name="creating"
               value={""}
               onChange={_ => null}
             />
-            {/* <ImageField
+            <ImageField
               label_text="Обложкa профиля"
               description="Мы рекомендуем изображение размером не меньше 1600px в ширинy и 400px в длинy"
               descriptionClassName="max-w-[600px]"
-              labelClassName="font-medium text-[32px]"
+              labelClassName="font-medium"
               id="image"
               name="image"
               value={""}
               onChange={_ => null}
-            /> */}
+            />
+            {/* <ImageUpload/> */}
             <InputField
               type="text"
               label_text="URL страницы"
-              labelClassName="font-medium text-[32px]"
+              labelClassName="font-medium"
               id="url"
               name="url"
               value={""}
@@ -51,7 +52,7 @@ export default function MyBlogPageEdit() {
             />
             <CustomCKEditor
               label_text="O вашей странице"
-              labelClassName="font-medium text-[32px]"
+              labelClassName="font-medium"
               description="Это то, что потенциальные участники увидят, когда попадут на вашу страницу, поэтому обязательно нарисуйте привлекательную картину того, как они могут присоединиться к вам в этом путешествии."
               value=""
               onChange={_ => null}

@@ -65,7 +65,7 @@ export default function CustomCKEditor(props: ICKEditorComponentProps) {
   const labelClassNameDefault = "";
   const labelCombinedClassName = classNames(labelClassNameDefault, props.labelClassName);
 
-  const descriptionClassNameDefault = "font-medium text-[26px] text-[#909090]";
+  const descriptionClassNameDefault = "font-medium text-[#909090]";
   const descriptionCombinedClassName = classNames(descriptionClassNameDefault, props.descriptionClassName);
 
   return (
