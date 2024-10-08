@@ -1,0 +1,135 @@
+$shadowColor: rgba(64, 64, 64, 0.2)
+@mixin shadow()
+	box-shadow: 1px 1px 50px -6px $shadowColor
+	-webkit-box-shadow: 1px 1px 50px -6px $shadowColor
+	-moz-box-shadow: 1px 1px 50px -6px $shadowColor
+.ava
+	border-radius: 50%
+	position: relative
+	top: -80px
+	left: calc(50% - 80px)
+.profile
+	margin-top: -50px
+	display: grid
+	justify-content: center
+	text-align: center
+	.profile__name
+		font-size: 42px
+		
+	.profile__subscribes
+		color: #A0A0A0
+		font-size: 18px
+		span
+			color: #737373
+			font-size: 25px
+			// font-: bold
+	.profile__description
+		color: #585858
+		margin-top: 30px
+	.profile__button
+		margin-top: 80px
+
+		background: #252A3D
+
+		font-size: 25px
+		font-weight: bold
+		color: #ffffff
+
+		border-radius: 15px
+		height: 69px
+
+		display: flex
+		justify-content: center
+		align-items: center
+		column-gap: 10px
+.subscribes
+	h2
+		font-size: 30px
+		font-weight: 500
+		margin:42px 0 70px 0
+	.subscribes__blocks
+		display: flex
+		justify-content: space-between
+		.subscribes__block
+			border-radius: 10px
+			padding: 16px 37px 16px
+
+			height: 300px
+			width: 327px
+
+			position: relative
+			@include shadow()
+			.subscribes__block-btn
+				position: absolute
+				bottom: 16px
+
+				background-color: #252A3D
+			
+				color: #fff
+				font-size: 17px
+				font-weight: bold
+
+				border-radius: 10px
+				margin: 0 auto
+
+				width: 80%
+				height: 45px
+			ul
+				font-weight: 500
+				display: grid
+				row-gap: 10px
+			.subscribes__block-title
+				text-align: center
+				margin-bottom: 17px
+				h3
+					font-size: 17px
+					font-weight: 500
+				span
+					font-size: 13px
+					color: #646464
+
+.user__config
+	margin-top: 70px
+	@include shadow()
+	// height: 613px
+	section
+		padding: 41px 48px 
+		h1
+			font-size: 30px
+			font-weight: 600
+			margin-bottom: 37px
+		p
+			font-size: 23px
+			margin-bottom: 40px
+		.user__config-info
+			ul
+				display: grid
+				row-gap: 20px
+				li
+					display: flex
+					align-items: center
+					justify-content: left
+					img
+						margin-right: 32px
+					.val
+						font-size: 27px
+						margin-right: 12px
+						font-weight: bold
+					.nam
+						font-size: 22px
+						color: #505050
+.profile-nav
+	border-top: 1px solid black
+	border-bottom: 1px solid black
+
+	display: flex
+	column-gap: 45px
+	justify-content: center
+
+	font-size: 18px
+	button
+		height: 100%
+		&:active
+			font-weight: bold
+		// &:hover
+			// background: black

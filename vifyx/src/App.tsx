@@ -10,8 +10,8 @@ import EditorContextProvider from "./pages/CreateBlogPage/Editor/EditorContextPr
 function App() {
   return (
     <EditorContextProvider>
-        <Routes>
-          <Route path="/" element={<Layout />}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="tracked" element={<MainPage />} />
           <Route path="my-blog" element={<MyBlogPage />} />

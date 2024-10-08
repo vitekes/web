@@ -9,12 +9,9 @@ export const store = configureStore({
     modalStatuses: modalStatusReducer,
     user: authReducer,
     [userApi.reducerPath]: userApi.reducer,
-    [blogApi.reducerPath]: blogApi.reducer,
+    [blogApi.reducerPath]: blogApi.reducer
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
-      .concat(userApi.middleware)
-      .concat(blogApi.middleware),
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(userApi.middleware).concat(blogApi.middleware)
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -1,10 +1,8 @@
-import React from "react";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
 import { Outlet } from "react-router-dom";
-import RegistrationModal from "../modals/RegistrationModal";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 import LoginModal from "../modals/LoginModal";
-
+import RegistrationModal from "../modals/RegistrationModal";
 
 export default function Layout() {
   return (
@@ -14,8 +12,8 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <RegistrationModal/>
-      <LoginModal/>
+      <RegistrationModal />
+      <LoginModal />
     </div>
   );
 }

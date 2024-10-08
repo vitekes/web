@@ -15,8 +15,8 @@ const initialState: IModalWindows = {
   modals: {
     register: { isOpen: false },
     login: { isOpen: false },
-    menu_sidebar: { isOpen: false },
-  },
+    menu_sidebar: { isOpen: false }
+  }
 };
 
 export const ModalWindowsSlice = createSlice({
@@ -24,7 +24,6 @@ export const ModalWindowsSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action: PayloadAction<string>) => {
-      
       const modal = state.modals[action.payload];
       if (modal) {
         state.modals[action.payload].isOpen = true;
@@ -35,8 +34,8 @@ export const ModalWindowsSlice = createSlice({
       if (modal) {
         state.modals[action.payload].isOpen = false;
       }
-    },
-  },
+    }
+  }
 });
 
 export const { openModal, closeModal } = ModalWindowsSlice.actions;
